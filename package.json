@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/orli11/festivalmusica/issues"
   },
-  "homepage": "https://github.com/orli11/festivalmusica#readme"
+  "homepage": "https://github.com/orli11/festivalmusica#readme",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
 }

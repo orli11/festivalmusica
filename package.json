@@ -1,0 +1,27 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "APRENDIENDO SASS Y NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orli11/festivalmusica.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp",
+    "CSS",
+    "JavaScript",
+    "HTML"
+  ],
+  "author": "Orlando Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orli11/festivalmusica/issues"
+  },
+  "homepage": "https://github.com/orli11/festivalmusica#readme"
+}

@@ -1,0 +1,13 @@
+// Archivo principal de estilos es app.scss. 
+// Para archivos secundarios se usa el guion bajo al inicio del nombre: _variables.scss
+// esto indica que se incluye en un solo archivo principal y no se compila por separado.
+
+$fuente_principal : "Montserrat", sans-serif;
+
+// Colores
+$verde:#4CB8B3;
+$rosa: #F53756;
+$amarillo: #fdda00;
+$morado: #752F97;
+$negro: #000000;
+$blanco: #FFFFFF;

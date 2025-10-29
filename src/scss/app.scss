@@ -1,9 +1,5 @@
 // Costume properties: Variables en SASS inician en $
 // Sintaxis para importar las variables en el archivo principal app.scss
-@use 'base/variables' as v;
+@forward 'base';
 
-body {
-    font-family: v.$fuente_principal;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+

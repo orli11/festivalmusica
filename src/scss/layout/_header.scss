@@ -1,0 +1,26 @@
+// @use -> Importa el archivo pero mantiene su espacio de nombres
+// @forward -> Reexporta el archivo para que pueda ser usado en otro archivo
+@use 'base/variables' as v;
+
+// Estilos para el header
+.header {
+    background-color: v.$verde;
+    .contenido-header {
+        padding: 2rem;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    h1 {
+        color: v.$blanco;
+        margin: 0;
+    }
+}
+
+.navegacion-principal {
+    a {
+        color: v.$blanco;
+    }
+}
+

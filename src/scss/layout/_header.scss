@@ -19,8 +19,17 @@
 }
 
 .navegacion-principal {
+    display: flex;
+    gap: 2rem;
     a {
         color: v.$blanco;
+        font-size: 2.4rem;
+
+        // Para animaciones en css usabamos a:hover
+        // En SASS podemos usar & para referirnos al padre
+        &:hover {
+            color:v.$amarillo;
+        }
     }
 }
 

@@ -1,3 +1,26 @@
-@mixin telefono {
+@use 'varibles' as v;
 
+// Mixin para telefono
+@mixin telefono {
+    @media (max-width: v.$telefono) {
+        @content;
+    }
+}
+//Mixin para tablet
+@mixin tablet {
+    @media (max-width: v.$tablet) {
+        @content;
+    }
+}
+// Mixin para escritorio
+@mixin desktop {
+    @media (max-width: v.$desktop) {
+        @content;
+    }
+}
+// Mixin para desktopXL
+@mixin desktopXL {
+    @media (max-width: v.$desktopXL) {
+        @content;
+    }
 }

@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+//se tiene que importar de sass color el código para el oscurecimiento quedaría de la siguiente forma, con la importación: @use 'sass:color'
+.video {
+    position: relative; //Siempre el padre tiene que ser relativo
+    .overlay {
+        position: absolute;
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 60%),
+            rgba(color.adjust(v.$morado, $lightness:-20%), 90%) 
+            rgba(color.adjust(v.$morado,$lightness:-30%), 90%)
+        );
+        inset: 0;
+    }
+    video {
+
+    }
+}

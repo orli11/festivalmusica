@@ -30,3 +30,10 @@
     max-width: 120rem;
     margin: 0 auto;
 }
+
+//Mixin para grid
+@mixin grid($columnas : 1, $gap : 5rem) { //Valores por defecto
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}

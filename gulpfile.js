@@ -6,9 +6,9 @@ const sass = gulpSass(dartSass)
 
 // Compile SCSS to CSS
 export function css( done ) {
-    src('src/scss/app.scss')
+    src('src/scss/app.scss', { sourcemaps: true }) //Identifica el archivo principal de SASS
         .pipe( sass().on('error', sass.logError) ) //Aplica SASS, si hay un error lo muestra en consola
-        .pipe( dest('build/css') )
+        .pipe( dest('build/css', { sourcemaps: true}) )
     done()
 }
 

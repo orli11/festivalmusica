@@ -25,13 +25,19 @@ function mostrarImagen (i){
     imagen.src = `src/img/gallery/full/${i}.jpg`; // Establecer la ruta de la imagen
     imagen.alt = 'Imagen de la galería'; // Establecer el texto alternativo
 
-
-    //Generar modal
+        //Generar modal
     const modal = document.createElement('DIV');
     modal.classList.add('modal');
     modal.onclick = cerrarModal;
 
+    //Btn cerrar modal
+    const cerrarModalBtn = document.createElement('BUTTON');
+    cerrarModalBtn.textContent = 'X';
+    cerrarModalBtn.classList.add('btn-cerrar');
+    cerrarModalBtn.onclick = cerrarModal;
+
     modal.appendChild(imagen); // Agregar la imagen al modal
+    modal.appendChild(cerrarModalBtn); // Agregar el botón de cerrar al modal
 
     //Agregar al html
     const body = document.querySelector('body');

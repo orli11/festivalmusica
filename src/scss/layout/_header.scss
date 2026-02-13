@@ -36,22 +36,21 @@
     }
 }
 
-.navegacion-principal {
+.navegacion-principal{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    @include m.tablet {
+    @include m.tablet{
         flex-direction: row;
     }
-    a {
+    a{
         color: v.$blanco;
         font-size: 2.4rem;
 
-        // Para animaciones en css usabamos a:hover
-        // En SASS podemos usar & para referirnos al padre
-        &:hover {
-            color:v.$amarillo;
+        &:hover,
+        &.active {
+            color: v.$amarillo;
         }
     }
 }

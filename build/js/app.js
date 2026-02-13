@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     navegacionFija();
     crearGaleria();
+    resaltarEnlace();
+    scrollNav();
 });
 
 function navegacionFija() {
@@ -16,6 +17,7 @@ function navegacionFija() {
         }
     });
 }
+
 function crearGaleria() {
     const CANTIDAD_IMAGENES = 16;
     const galeria = document.querySelector('.galeria-imagenes');
@@ -70,3 +72,39 @@ function cerrarModal(){
         
     }, 500); // Retardo para permitir animación de cierre
 } 
+
+function resaltarEnlace() {
+    document.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navegacion-principal a');
+
+        let actual = '';
+        sections.forEach( section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if(window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                actual =section.id;
+            }
+        })
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if(link.getAttribute('href') === '#' + actual) {
+                link.classList.add('active');
+            }
+        })
+    })
+}
+
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.navegacion-principal a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const sectionScroll = e.target.getAttribute('href'); // Obtener el valor del atributo href del enlace clickeado
+            const section = document.querySelector(sectionScroll); // Seleccionar la sección correspondiente utilizando el valor del href
+
+            section.scrollIntoView({behavior: 'smooth'}); // Desplazarse suavemente a la sección seleccionada
+        })
+    })
+}

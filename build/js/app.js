@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    navegacionFija();
     crearGaleria();
 });
 
+function navegacionFija() {
+    const header = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+
+    window.addEventListener('scroll', function(){
+        if(sobreFestival.getBoundingClientRect().bottom < 1){ // Revisa si la parte inferior de la sección está por encima de la ventana
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+        }
+    });
+}
 function crearGaleria() {
     const CANTIDAD_IMAGENES = 16;
     const galeria = document.querySelector('.galeria-imagenes');
